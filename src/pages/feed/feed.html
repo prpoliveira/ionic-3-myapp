@@ -14,7 +14,7 @@
 
 
 <ion-content padding>
-  <ion-card>
+  <!--<ion-card>
 
     <ion-item>
       <ion-avatar item-start>
@@ -52,5 +52,45 @@
       </ion-col>
     </ion-row>
 
+  </ion-card>-->
+  <ion-card *ngFor="let filme of lista_filmes">
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/imgs/marty-avatar.png">
+      </ion-avatar>
+      <h2 class="feed_title">{{filme.original_title}}</h2>
+      <p>{{filme.release_date}}</p>
+    </ion-item>
+
+    <img [src]="'https://image.tmdb.org/t/p/w300/' + filme.backdrop_path">
+
+    <ion-card-content>
+      <p>{{filme.overview}}</p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col>
+        <a (click)="setLikes()">
+          <button ion-button icon-left clear small>
+            <ion-icon name="thumbs-up"></ion-icon>
+            <div> {{like}} </div>
+          </button>
+        </a>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small>
+          <ion-icon name="text"></ion-icon>
+          <div>4 Comments</div>
+        </button>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-note>
+          11h ago
+        </ion-note>
+      </ion-col>
+    </ion-row>
+
   </ion-card>
+
 </ion-content>
