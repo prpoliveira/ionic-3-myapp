@@ -15,6 +15,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FeedPageModule } from '../pages/feed/feed.module';
 import { IntroPage } from '../pages/intro/intro';
 import { IntroPageModule } from '../pages/intro/intro.module';
+import { PerfilPageModule } from '../pages/perfil/perfil.module';
+import { SobrePageModule } from '../pages/sobre/sobre.module';
+import { ConfiguracoesPageModule } from '../pages/configuracoes/configuracoes.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { IntroPageModule } from '../pages/intro/intro.module';
     FeedPageModule,
     IntroPageModule,
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    ConfiguracoesPageModule,
+    PerfilPageModule,
+    SobrePageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
